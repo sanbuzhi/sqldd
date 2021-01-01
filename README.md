@@ -76,7 +76,7 @@ TestOneSite循环遍历url.json文件，循环调用Ifinjection判断当前网�
 
 ![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps9.jpg) 
 
-### 可注入点筛选流程图
+图4-9 可注入点筛选流程图
 
 筛选结果如图4-10所示。
 
