@@ -1,3 +1,9 @@
+图4-6 程序总体流程图
+
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps25.jpg) 
+
+图 SQLDD运行界面
+
 ### 测试环境搭建
 
 测试网站：本地搭建Sqli-lib环境。如图4-1所示。
@@ -44,11 +50,6 @@ WAF：网站安全狗Apache版（版本：V4.0.28330），如图4-4所示。测�
 
 ![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps6.jpg) 
 
-图4-6 程序总体流程图
-
-![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps25.jpg) 
-
-图 SQLDD运行界面
 
 ## 网页爬取及可注入点筛选流程
 
