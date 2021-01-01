@@ -4,31 +4,31 @@
 
 Sqli-lib是一款由PHP语言编写的SQL注入漏洞闯关游戏，包含了六十几个可注入页面，涵盖了几乎所有类型的SQL注入漏洞，同时不同的关卡自定义了不同的过滤规则，是SQL注入漏洞学习的首选靶场。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps1.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps1.jpg) 
 
 图4-1  本地搭建Sqli-lib环境
 
 Mysql版本：5.6.11。如图4-2所示。此外版本5.7.19与版本8.0.20也做了测试，结果与版本5.6.11测试结果相近。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps2.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps2.jpg) 
 
 图4-2 Mysql版本信息
 
 PHP版本：5.6.27-nt。如图4-3所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps3.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps3.jpg) 
 
 图4-3 PHP版本信息
 
 WAF：网站安全狗Apache版（版本：V4.0.28330），如图4-4所示。测试过程中，所有类型的拦截规则都已开启。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps4.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps4.jpg) 
 
 图4-4 网站安全狗运行图
 
 开发工具：IDEA（版本：2018.2.5终版），如图4-5所示。IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。其在智能代码助手、代码自动提示、重构、JavaEE支持、各类版本工具([git](https://baike.baidu.com/item/git/12647237)、[svn](https://baike.baidu.com/item/svn/3311103)等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能当属超常。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps5.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps5.jpg) 
 
 图4-5 IDEA 2018版
 
@@ -42,11 +42,11 @@ WAF：网站安全狗Apache版（版本：V4.0.28330），如图4-4所示。测�
 
 程序的整体调用关系如图4-6所示，模块一独立运行，模块四和模块五均需要调用模块二和模块三。数据流的走向为模块一通过网页爬取及自身构造，传递给模块四一个injectable.json文件，模块四取得injectable.json文件通过探测waf规则和提取有效bypass，传递给模块五一个bypass.txt文件，模块五结合模块一的injectable.json文件和模块四的bypass.txt文件，便可进行注入类型探测和最后的注入实施，最后以注入结果进行展示输出。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps6.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps6.jpg) 
 
 图4-6 程序总体流程图
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps25.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps25.jpg) 
 
 图 SQLDD运行界面
 
@@ -54,7 +54,7 @@ WAF：网站安全狗Apache版（版本：V4.0.28330），如图4-4所示。测�
 
 网页爬取流程如图4-7所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps7.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps7.jpg) 
 
 图4-7 网页爬取流程图
 
@@ -64,7 +64,7 @@ Spider作为程序入口，输入一个种子URL，种子URL进入待访问队�
 
 爬取结果如图4-8所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps8.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps8.jpg) 
 
 图4-8 网页爬取结果
 
@@ -74,13 +74,13 @@ TestOneSite循环遍历url.json文件，循环调用Ifinjection判断当前网�
 
 可注入点筛选流程如图4-9所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps9.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps9.jpg) 
 
 图4-9 可注入点筛选流程图
 
 筛选结果如图4-10所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps10.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps10.jpg) 
 
 图4-10 可注入点筛选结果
 
@@ -88,7 +88,7 @@ TestOneSite循环遍历url.json文件，循环调用Ifinjection判断当前网�
 
 量化页面差异流程如图4-11所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps11.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps11.jpg) 
 
 ## 量化页面差异流程图
 
@@ -96,7 +96,7 @@ PageComparison里有两个方法getNormalPageComparison和getRate，其共同构
 
 举例如图4-12所示。输入正常值1时，得分为1，按照上述确定的规则，判定此参数下的网页为正常网页；输入错误值-1时，得分为2，判定此参数下的网页为错误网页；输入会被WAF拦截的值1’ order by 1--+时，得分为3，判定此参数下的网页为被WAF拦截的网页。判定结果与实际符合。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps12.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps12.jpg) 
 
 图4-12 页面量化实例
 
@@ -104,7 +104,7 @@ PageComparison里有两个方法getNormalPageComparison和getRate，其共同构
 
 启发式构造payload流程如图4-13所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps13.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps13.jpg) 
 
 ## 启发式构造payload流程
 
@@ -114,7 +114,7 @@ splitBoundary方法将payload按一定规则拆分成几个部分，heuristicDet
 
 WAF规则探测及bypass生成流程如图4-14所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps14.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps14.jpg) 
 
 ## WAF规则探测及bypass生成流程图
 
@@ -122,13 +122,13 @@ WAF规则探测及bypass生成流程如图4-14所示。
 
 bypass筛选过程如图4-15所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps15.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps15.jpg) 
 
 图4-15 bypass筛选过程
 
 bypass筛选结果如图4-16所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps16.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps16.jpg) 
 
 图4-16 bypass筛选结果
 
@@ -136,13 +136,13 @@ bypass筛选结果如图4-16所示。
 
 DetectType遍历InjectableDomain实体，依次调用UnionQueryPayloads类的ifCouldBeInjected方法，ErrorPayloads类的makeErrorBoundarys方法，TimeBlindPayloads类的filterBoundarys方法。如果ifCouldBeInjected返回true则表示联合注入对此注入点有效，makeErrorBoundarys方法将可利用的boundary保存，如果最终保存的boundary不为空，则表示报错注入对此注入点有效，filterBoundarys方法将可利用的boundary保存，如果最终保存的boundary不为空，则表示时间盲注对此注入点有效。注入类型探测流程如图4-17所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps17.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps17.jpg) 
 
 图4-17 注入类型探测流程
 
 由于完整探测所有页面可注入类型耗时太长，这里只截取部分探测结果，并展示其中可用boundary样例。如图4-18所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps18.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps18.jpg) 
 
 图4-18 注入类型探测结果
 
@@ -150,13 +150,13 @@ DetectType遍历InjectableDomain实体，依次调用UnionQueryPayloads类的ifC
 
 联合注入流程如图4-19所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps19.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps19.jpg) 
 
 图4-19 联合注入流程
 
 联合注入结果如图4-20所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps20.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps20.jpg) 
 
 图4-20 联合注入结果
 
@@ -164,13 +164,13 @@ DetectType遍历InjectableDomain实体，依次调用UnionQueryPayloads类的ifC
 
 报错注入流程如图4-21。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps21.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps21.jpg) 
 
 图4-21 报错注入流程
 
 报错注入结果如图4-22所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps22.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps22.jpg) 
 
 图4-22 报错注入结果
 
@@ -178,12 +178,12 @@ DetectType遍历InjectableDomain实体，依次调用UnionQueryPayloads类的ifC
 
 时间盲注流程如图4-23所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps23.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps23.jpg) 
 
 图4-23 时间盲注流程图
 
 时间盲注结果如图4-24所示。
 
-![img](file:///C:\Users\kenshin\AppData\Local\Temp\ksohtml12636\wps24.jpg) 
+![img](https://github.com/sanbuzhi/sqldd/tree/main/readme_img/wps24.jpg) 
 
 图4-24 时间盲注结果
